@@ -13,7 +13,7 @@ const TaskManager = () => {
   const [descState, setDescState] = useState(false);
   const [titleinput, setTitleInputState] = useState("");
   const [descriptioninput, setDescriptionInputState] = useState("");
-  const noTasksString = ["No tasks currently.", "Keep it up!"];
+  const noTasksString = ["No tasks currently.", "\nKeep it up!"];
   // local tasks
   const [tasks, setTasks] = useState([]);
   // for search results
@@ -236,9 +236,9 @@ const TaskManager = () => {
             placeholder="Search Task"
             onChange={searchTaskHandler}
           />
-          <span id="searchspan">
+          <button id="searchspan">
             <FaSearch id="_plus"></FaSearch>
-          </span>
+          </button>
         </div>
       </div>
       {/* Task Elements */}
