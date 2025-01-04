@@ -66,7 +66,7 @@ const TaskManager = () => {
 
   const fetchTasksHandler = async () => {
     try {
-      const { data, message, success } = await getTasks();
+      const { data, success } = await getTasks();
       if (success) {
         // I am reversing the array, so that the last task apeears first,intutive
         data.reverse();
@@ -85,7 +85,7 @@ const TaskManager = () => {
 
   const deleteTaskHandler = async (id: String) => {
     try {
-      const { data, message, success } = await deleteTaskbyId(id);
+      const { message, success } = await deleteTaskbyId(id);
       if (success) {
         //task deleted
         //success toast
@@ -109,7 +109,7 @@ const TaskManager = () => {
       isDone: !isDone,
     };
     try {
-      const { data, message, success } = await updateTaskbyId(_id, obj);
+      const { message, success } = await updateTaskbyId(_id, obj);
       if (success) {
         //task completed
         //success toast
@@ -133,10 +133,7 @@ const TaskManager = () => {
     };
     console.log("obfmgj:", obj);
     try {
-      const { data, message, success } = await updateTaskbyId(
-        updatedTaskId,
-        obj
-      );
+      const { message, success } = await updateTaskbyId(updatedTaskId, obj);
       if (success) {
         //task updated
         //success toast
