@@ -729,7 +729,7 @@ body {
     color: #757575;
     font-family: Poppins;
     font-weight: 800;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     animation: fadein linear 0.3s;
   }
 
@@ -746,7 +746,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
     flex-grow: 1;
   }
   .title {
